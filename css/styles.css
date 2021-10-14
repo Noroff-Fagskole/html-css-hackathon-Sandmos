@@ -13,6 +13,27 @@ body {
 
 }
 
+.color-blue {
+    color: blue;
+}
+
+.color-green {
+    color: green;
+}
+
+.color-red {
+    color: red;
+}
+/*
+mobile 320px, tablet 767px, desktop 1024px
+*/
+main img{
+    width: 100%;
+    margin: 0 auto, 0 auto;
+    display: block;
+    /*max-width: 767px;*/
+}
+
 .app-header{
     border-bottom: 1px solid #999;
     padding-bottom: 1em;
@@ -52,10 +73,43 @@ padding: 0.5em;
     }
 
  .app-navigation a:hover{
-     color: yellow;
+     color: #cfcccc;
      }
 
-
+     .app-navigation-drawer{
+        /*hide nav on load*/
+        display: block;
+        background-color: #fff;
+        padding: 0.5em;
+        list-style: none;
+        border-bottom: 2px solid green;
+        border-top: 2px solid red;
+        border-left: 2px solid royalblue;
+        border-right: 2px solid yellow;
+        /*animate default state on page load*/
+        transition: all 0.3s linear;
+        transform: translateY(-150%);
+        
+      }
+      
+          .sr-only {
+              display: none;
+          }
+          #hamburger-menu {
+              /*hides the checkbox*/
+              display: none;
+          }
+          #hamburger-menu:checked ~ .app-navigation-drawer {
+              /*Show nav on :checked */
+              display: block;
+              /* animate into page show state*/
+              transform: translateY(0%)
+          }
+          #hamburger-label {
+              cursor: pointer;
+          }
+          
+    
 
 h1 {
  
@@ -69,3 +123,111 @@ h1 {
 p {
     font-family: 'Open Sans', sans-serif;
 }
+
+
+form{
+    background-color: transparent;
+
+}
+
+form fieldset {
+    border: 5px dashed hotpink;
+    padding: 0 0 1em 1em;
+    background-color: lavender;
+}
+form fieldset legend{
+    font-style: italic;
+    font-size: 1em;
+}
+form label{
+    display: block;
+}
+
+form h5 {
+    margin-bottom: 0%;
+}
+.input-text {
+    border: 1px solid #444;
+    padding: 0.2em;
+    color:#555;
+    border-radius: 6px;
+
+}
+
+.input-text-area {
+    border-radius: 6px;
+}
+ 
+input[type="submit"]{
+    background-color:rgb(181, 226, 90);
+    width: 100%;
+    border: none;
+    padding: 0.4em;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover{
+background-color: hotpink;
+}
+
+.footer {
+    background-color: aqua;
+    padding: 1em;
+}
+
+.footer .column{
+    display: block;
+    width: 100%;
+    
+}
+/*
+ input[type="email"]{
+     background-color: red;
+ }
+input[type="tel"]{
+    background-color: red;
+}
+
+input[type="text"]{
+    background-color: red;
+}
+*/
+/* i am Tablet and Desktop*/
+@media screen and (min-width: 767px) {
+    .app-navigation-drawer{
+        transform: translateY(0);
+        background: transparent;
+        border-bottom: none;
+        border-top: none;
+        border-right: none;
+        border-left: none;
+        padding: 0;
+        margin: 0;
+      }
+    .fa-bars {
+        display: none;
+      }
+    .app-navigation-drawer li {
+        display: inline-block;
+      }
+   .app-article {
+        display: inline-block;
+        width: 60%;
+    }
+   .app-sidebar {
+       display: inline-block;
+       width: 35%;
+       vertical-align: top;
+   }
+   .footer .column{
+    display: inline-block;
+    width: 20%;
+    border: 1px solid red;
+}
+}
+
+
+
+
+
+

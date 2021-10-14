@@ -9,22 +9,40 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer"
+     />
     <link rel="stylesheet" href="./css/styles.css"/>
 
 </head>
 <body>
     <header class="app-header">
-        
      <div class="inner">
         <a href="/" class="app-logo">
-            <img src="./img/logo.png" alt="CSS Tricks">
-            </a>
+            <img src="./img/logo.png" alt="CSS Tricks"></a>
             <nav class="app-navigation">
-                <a href="/">Home</a>
-                <a href="./about.html">About</a>
-                <a href="./contact.html">Contact</a>
-                <a href="./singup.html">Signup</a>
-                
+                <label for="hamburger-menu">
+                    <span class="sr-only">Hamburger menu</span>
+                    <i class="fas fa-bars"></i>
+                </label>
+                <input id="hamburger-menu" type="checkbox" />
+                <ul class="app-navigation-drawer">
+                    <li><a href="/">
+                        <i class="fas fa-home color-blue"></i>
+                         Home</a>
+                        </li>
+                    <li><a href="./about.html">
+                        <i class="fas fa-book color-green"></i>
+                        About</a>
+                    </li>
+                    <li> <a href="./contact.html">
+                        <i class="fas fa-id-card"></i>
+                        Contact</a></li>
+                    <li> <a href="./singup.html">
+                        <i class="fas fa-user"></i>
+                        Signup</a>
+                    </li>
+                </ul>
+                                
       </nav>
      </div>
     </header>
@@ -102,7 +120,8 @@
                 </p>
                 <p>The important thing is to give the correct location of the CSS file, whether that’s on your web server, a CDN or some other server altogether.
                 </p>
-                <h2>The Sheet is Not Required for HTML</h2>
+ 
+               <h2>The Sheet is Not Required for HTML</h2>
                 <p>You saw the example of a barebones web page above. No web page is required to use a stylesheet.
                 </p>
                 <p>Also, we can technically write CSS directly in the HTML using the HTML style attribute. This is called inline styling and it goes a little something like this if you imagine you’re looking at the code of an HTML file:
@@ -116,11 +135,34 @@
                 <p></p>
 
             </article>
-            <aside class="app-sidebar">sidebar</aside>
+
+            <aside class="app-sidebar">
+                <figure>
+                    <img src="./img/advert-1.png" alt="Advert 1" />
+                    <caption>Signup to mailchimp</caption>
+                </figure>
+
+                <figure>
+                    <img src="./img/advert-2.png" alt="Advert 2">
+                    <caption> Sign up for shortcut</caption>
+                </figure>
+
+                <figure>
+                    <img src="./img/advert-3.png" alt="Advert 3">
+                    <caption> Sign up for themes challenge</caption>
+                </figure>
+            </aside>
         </section>
     </div>
     </main>
 
-    <footer>footer</footer>
+    <footer class="footer">
+      <div class="inner">
+        <div class="column">column 1</div>
+        <div class="column">column 2</div>
+        <div class="column">column 3</div>
+        <div class="column">column 4</div>
+      </div>
+    </footer>
 </body>
 </html>
